@@ -8,7 +8,12 @@ buttonHolder.classList.add('button-holder');
 container.classList.add('container');
 
 // Create a button that will allow users to give up a number of squares
-let button = document.createElement('button');
+button = document.createElement('button');
+button.innerText ='Afmeting';
+button.addEventListener('click', () => {
+    alert("Afmeting grid (max. 100):");
+})
+
 buttonHolder.appendChild(button);
 
 // Create the grid
@@ -19,7 +24,7 @@ function createGrid(gridSize) {
     for (a = 0; a < (gridSize * gridSize); a++){
         let square = document.createElement('div');
         
-        // Add a 'mouse over' listener to each square
+        // Add a 'mouse over' listener to each square to let it change its color
         square.addEventListener("mouseover", function(e){
             this.classList.add('square-over');
         });
@@ -29,4 +34,4 @@ function createGrid(gridSize) {
     }
 }
 
-createGrid(30);
+createGrid(15);
