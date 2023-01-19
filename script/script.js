@@ -10,9 +10,17 @@ container.classList.add('container');
 // Create a button that will allow users to give up a number of squares
 button = document.createElement('button');
 button.innerText ='Afmeting';
-button.addEventListener('click', () => {
-    alert("Afmeting grid (max. 100):");
-})
+
+button.addEventListener('click', () => { 
+    let userSize = prompt("Afmeting grid:", "Max. 100");
+    
+    // Only if the given number is smaller than 100 create a grid, else give a warning
+    if (userSize < 100) {
+        createGrid(userSize);
+    } else {
+        alert("Een getal onder de 100!");
+    }    
+});
 
 buttonHolder.appendChild(button);
 
@@ -33,5 +41,3 @@ function createGrid(gridSize) {
         container.appendChild(square).className = "square";
     }
 }
-
-createGrid(15);

@@ -9,7 +9,7 @@ button{
 
 #holder{
   min-width: 960px;
-  min-height: 920px;
+  min-height: 900px;
 
   display: flex;
   flex-direction: column;
