@@ -1,0 +1,50 @@
+:root {
+  --grid-size: 1;
+}
+
+#holder{
+  min-width: 960px;
+  min-height: 920px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#button-holder{
+
+}
+
+button{
+
+}
+
+#container{  
+  width: 960px;
+  height: 960px;
+
+  display: inline-grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-template-rows: repeat(var(--grid-size), 1fr);
+  
+}
+
+.square{
+  width: auto;
+  height: auto;
+
+  border: 1px solid #000;;
+  background: white;
+
+}
+
+.square-over{
+  width: auto;
+  height: auto;
+
+  border: 1px solid #000;;
+  background: black;
+
+}
