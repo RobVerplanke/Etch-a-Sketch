@@ -16,6 +16,8 @@ button.addEventListener('click', () => {
     
     // Only if the given number is smaller than 100 create a grid, else give a warning
     if (userSize < 100) {
+        // empty current grid
+        container.innerHTML = "";
         createGrid(userSize);
     } else {
         alert("Een getal onder de 100!");
@@ -41,3 +43,6 @@ function createGrid(gridSize) {
         container.appendChild(square).className = "square";
     }
 }
+
+// Create default grid
+createGrid(15);
