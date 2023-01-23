@@ -1,5 +1,6 @@
 :root {
   --grid-size: 1;
+  --bg-color: #000;
 }
 
 button{
@@ -24,7 +25,7 @@ button{
 
 #container{  
   width: 960px;
-  height: 960px;
+  height: 860px;
 
   display: inline-grid;
   grid-template-columns: repeat(var(--grid-size), 1fr);
@@ -45,7 +46,7 @@ button{
   width: auto;
   height: auto;
 
-  border: 1px solid black;
-  background: black;
+  border: 1px solid var(--bg-color);
+  background: var(--bg-color);
 
 }
