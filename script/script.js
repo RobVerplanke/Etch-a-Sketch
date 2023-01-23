@@ -2,15 +2,18 @@ const holder = document.getElementById("holder");
 const buttonHolder = document.getElementById("button-holder");
 const container = document.getElementById("container");
 const defaultSize = 16;
+const defaultColor = 'black';
+
 let userSize = defaultSize;
-let colorMode = 'black';
+let colorMode = defaultColor;
 
 // Add styles
 holder.classList.add('holder');
 buttonHolder.classList.add('button-holder');
 container.classList.add('container');
 
-// Create a grid
+
+// Create a grid function
 function createGrid(gridSize) {
     container.style.setProperty('--grid-size', gridSize);
     
@@ -19,14 +22,13 @@ function createGrid(gridSize) {
         let square = document.createElement('div');
         
         // Add a 'mouse over' listener to each square to let it change its color
-        square.addEventListener("mouseover", function(e){
-            e.target.style.backgroundColor = colorMode;
-            e.target.style.border = colorMode;
-            this.classList.add('square-over');            
+        square.addEventListener("mouseover", function(e){    
+            e.target.style.backgroundColor = colorMode;       
         });
         
         // Add the squares to the grid container and give them a style
         container.appendChild(square).className = "square";
+
     }
 }
 
@@ -56,6 +58,7 @@ buttonReset.innerText = "Reset";
 buttonReset.addEventListener('click', () =>{
     // Clear current grid
     container.innerHTML = "";
+    
     // Create a new grid with the size from the input prompt, if user did not resize the grid, use the default size.
     if (userSize){
         createGrid(userSize);
@@ -64,12 +67,21 @@ buttonReset.addEventListener('click', () =>{
     }
 })
 
+// Eraser button that clears one square at a time
+buttonErase = document.createElement('button');
+buttonErase.innerText = "Gum";
+
+buttonErase.addEventListener('click', () =>{
+    colorMode = 'White';
+})
+
+
 // Create a button that will change pencil color to red
 buttonRed = document.createElement('button');
 buttonRed.innerText ='Rood';
 
 buttonRed.addEventListener('click', () =>{
-    colorMode = 'red';
+    colorMode = 'Red';
 
 })
 
@@ -91,12 +103,13 @@ buttonBlack.addEventListener('click', () =>{
 
 })
 
-
+// Add buttons to the buttonholder
 buttonHolder.appendChild(buttonBlack);
 buttonHolder.appendChild(buttonBlue);
 buttonHolder.appendChild(buttonRed);
 buttonHolder.appendChild(buttonSize);
 buttonHolder.appendChild(buttonReset);
+buttonHolder.appendChild(buttonErase);
 
 // Create default grid
 createGrid(defaultSize);

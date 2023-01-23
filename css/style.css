@@ -1,6 +1,7 @@
 :root {
   --grid-size: 1;
   --bg-color: #000;
+  --border-color: rgb(226, 226, 226);
 }
 
 button{
@@ -46,7 +47,7 @@ button{
   width: auto;
   height: auto;
 
-  border: 1px solid var(--bg-color);
+  border: 1px solid var(--border-color);
   background: var(--bg-color);
 
 }
