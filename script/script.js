@@ -59,7 +59,7 @@ buttonReset.addEventListener('click', () =>{
     // Clear current grid
     container.innerHTML = "";
     
-    // Create a new grid with the size from the input prompt, if user did not resize the grid, use the default size.
+    // Create a new grid with the same size, if user did not resize the grid, use the default size.
     if (userSize){
         createGrid(userSize);
     } else {

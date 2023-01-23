@@ -13,6 +13,8 @@ button{
   min-width: 960px;
   min-height: 900px;
 
+  background: rgb(255, 254, 245);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,12 +23,21 @@ button{
 }
 
 #button-holder{
+  width: 860px;
+  height: 40px;
+  margin-bottom: 20px;
+  background: rgb(250, 74, 62);
 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #container{  
-  width: 960px;
+  width: 860px;
   height: 860px;
+
+  box-shadow: 10px 10px 5px rgb(201, 201, 201);
 
   display: inline-grid;
   grid-template-columns: repeat(var(--grid-size), 1fr);
