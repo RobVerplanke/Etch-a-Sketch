@@ -37,6 +37,7 @@ function createGrid(gridSize) {
 // Create a button that will allow users to give up a number of squares
 buttonSize = document.createElement('button');
 buttonSize.innerText ='Afmeting';
+buttonSize.setAttribute("id", "button-center");
 
 buttonSize.addEventListener('click', () => { 
     userSize = prompt("Afmeting grid:", "Max. 100");
@@ -54,6 +55,7 @@ buttonSize.addEventListener('click', () => {
 // Reset button
 buttonReset = document.createElement('button');
 buttonReset.innerText = "Reset";
+buttonReset.setAttribute("id", "button-right");
 
 buttonReset.addEventListener('click', () =>{
     // Clear current grid
@@ -70,6 +72,7 @@ buttonReset.addEventListener('click', () =>{
 // Eraser button that clears one square at a time
 buttonErase = document.createElement('button');
 buttonErase.innerText = "Gum";
+buttonErase.setAttribute("id", "button-right");
 
 buttonErase.addEventListener('click', () =>{
     colorMode = 'White';
@@ -79,6 +82,7 @@ buttonErase.addEventListener('click', () =>{
 // Create a button that will change pencil color to red
 buttonRed = document.createElement('button');
 buttonRed.innerText ='Rood';
+buttonRed.setAttribute("id", "button-left");
 
 buttonRed.addEventListener('click', () =>{
     colorMode = 'Red';
@@ -88,6 +92,7 @@ buttonRed.addEventListener('click', () =>{
 // Create a button that will change pencil color to blue
 buttonBlue = document.createElement('button');
 buttonBlue.innerText ='Blauw';
+buttonBlue.setAttribute("id", "button-left");
 
 buttonBlue.addEventListener('click', () =>{
     colorMode = 'Blue';
@@ -97,6 +102,7 @@ buttonBlue.addEventListener('click', () =>{
 // Create a button that will change pencil color to black
 buttonBlack = document.createElement('button');
 buttonBlack.innerText ='Zwart';
+buttonBlack.setAttribute("id", "button-left");
 
 buttonBlack.addEventListener('click', () =>{
     colorMode = 'Black';
